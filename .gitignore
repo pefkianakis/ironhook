@@ -1,0 +1,28 @@
+# Build output
+/bin/
+dist/
+
+# Test output
+coverage.out
+coverage.html
+*.test
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Logs
+*.log
