@@ -12,6 +12,7 @@ import (
 )
 
 type Querier interface {
+	ClaimDeliveries(ctx context.Context, arg ClaimDeliveriesParams) ([]ClaimDeliveriesRow, error)
 	GetIdempotencyRecord(ctx context.Context, arg GetIdempotencyRecordParams) (GetIdempotencyRecordRow, error)
 	InsertDeliveries(ctx context.Context, arg []InsertDeliveriesParams) (int64, error)
 	InsertEvent(ctx context.Context, arg InsertEventParams) (pgtype.Timestamptz, error)
