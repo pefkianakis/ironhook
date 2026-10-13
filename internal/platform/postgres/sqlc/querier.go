@@ -18,6 +18,7 @@ type Querier interface {
 	InsertEvent(ctx context.Context, arg InsertEventParams) (pgtype.Timestamptz, error)
 	InsertIdempotencyRecord(ctx context.Context, arg InsertIdempotencyRecordParams) (uuid.UUID, error)
 	ResolveEndpointsForEvent(ctx context.Context, arg ResolveEndpointsForEventParams) ([]ResolveEndpointsForEventRow, error)
+	StartDeliveryAttempt(ctx context.Context, arg StartDeliveryAttemptParams) (StartDeliveryAttemptRow, error)
 }
 
 var _ Querier = (*Queries)(nil)
