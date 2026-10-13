@@ -30,3 +30,10 @@ compose-down:
 	docker compose down
 
 check: fmt vet test build
+
+sqlc:
+	sqlc generate
+
+sqlc-check:
+	sqlc generate
+	git diff --exit-code -- internal/platform/postgres/sqlc
