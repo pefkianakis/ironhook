@@ -1,4 +1,4 @@
-.PHONY: fmt vet test test-race build run-api run-worker compose-up compose-down check
+.PHONY: fmt vet test test-race build run-api run-worker compose-up compose-down check sqlc sqlc-check test test-integration test-integration-race verify
 
 fmt:
 	go fmt ./...
@@ -11,6 +11,12 @@ test:
 
 test-race:
 	go test -race ./...
+
+test-integration:
+	go test -tags=integration ./...
+
+test-integration-race:
+	go test -race -tags=integration ./...
 
 build:
 	mkdir -p bin
@@ -37,3 +43,10 @@ sqlc:
 sqlc-check:
 	sqlc generate
 	git diff --exit-code -- internal/platform/postgres/sqlc
+
+verify:
+	sqlc generate
+	gofmt -w internal
+	go test ./...
+	go test -tags=integration ./...
+	go test -race -tags=integration ./...
