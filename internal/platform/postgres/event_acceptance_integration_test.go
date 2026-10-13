@@ -13,9 +13,9 @@ import (
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	appevent "github.com/cpefkianakis/ironhook/internal/app/event"
-	"github.com/cpefkianakis/ironhook/internal/idgen"
-	"github.com/cpefkianakis/ironhook/internal/platform/postgres"
+	appevent "github.com/pefkianakis/ironhook/internal/app/event"
+	"github.com/pefkianakis/ironhook/internal/idgen"
+	"github.com/pefkianakis/ironhook/internal/platform/postgres"
 )
 
 func testPool(

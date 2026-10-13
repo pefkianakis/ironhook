@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/cpefkianakis/ironhook/internal/config"
-	"github.com/cpefkianakis/ironhook/internal/httpapi"
+	"github.com/pefkianakis/ironhook/internal/config"
+	"github.com/pefkianakis/ironhook/internal/httpapi"
 )
 
 func main() {

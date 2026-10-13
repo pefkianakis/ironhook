@@ -9,7 +9,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/cpefkianakis/ironhook/internal/idgen"
+	"github.com/pefkianakis/ironhook/internal/idgen"
 )
 
 var (

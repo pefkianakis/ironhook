@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	appdelivery "github.com/cpefkianakis/ironhook/internal/app/delivery"
-	"github.com/cpefkianakis/ironhook/internal/platform/postgres"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5/pgxpool"
+	appdelivery "github.com/pefkianakis/ironhook/internal/app/delivery"
+	"github.com/pefkianakis/ironhook/internal/platform/postgres"
 )
 
 func seedClaimableDeliveries(

@@ -1,4 +1,4 @@
-module github.com/cpefkianakis/ironhook
+module github.com/pefkianakis/ironhook
 
 go 1.27.1
 
